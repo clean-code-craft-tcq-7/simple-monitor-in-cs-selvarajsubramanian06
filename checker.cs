@@ -3,17 +3,41 @@ using System.Diagnostics;
 
 class Checker
 {
-    static bool batteryIsOk(float temperature, float soc, float chargeRate) {
-        if(temperature < 0 || temperature > 45) {
+    static bool temperatureIsOk(float temperature)
+    {
+         if(temperature < 0 || temperature > 45) 
+         {
             Console.WriteLine("Temperature is out of range!");
             return false;
-        } else if(soc < 20 || soc > 80) {
+         }
+        return true;
+    }
+
+    static bool socIsOk(float soc)
+    {
+         if(soc < 20 || soc > 80) 
+         {
             Console.WriteLine("State of Charge is out of range!");
             return false;
-        } else if(chargeRate > 0.8) {
+         }
+        return true;
+    }
+
+    static bool chargeRateIsOk(float chargeRate)
+    {
+         if(chargeRate > 0.8) 
+         {
             Console.WriteLine("Charge Rate is out of range!");
             return false;
-        }
+         }
+        return true;
+    }
+    
+    static bool batteryIsOk(float temperature, float soc, float chargeRate) {
+        if(!temperatureIsOk(temperature) || !socIsOk(soc) || !chargeRateIsOk(chargeRate)) 
+        {
+            return false;
+        } 
         return true;
     }
 
