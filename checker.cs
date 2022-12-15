@@ -3,15 +3,7 @@ using System.Diagnostics;
 
 class Checker
 {
-    static bool temperatureIsOk(float temperature)
-    {
-         if(temperature < 0 || temperature > 45) 
-         {
-            Console.WriteLine("Temperature is out of range!");
-            return false;
-         }
-        return true;
-    }
+    
 
     static bool socIsOk(float soc)
     {
@@ -34,7 +26,7 @@ class Checker
     }
     
     static bool batteryIsOk(float temperature, float soc, float chargeRate) {
-        if(!temperatureIsOk(temperature) || !socIsOk(soc) || !chargeRateIsOk(chargeRate)) 
+        if(!temperatureCheck.temperatureIsOk(temperature) || !socIsOk(soc) || !chargeRateIsOk(chargeRate)) 
         {
             return false;
         } 
@@ -44,13 +36,13 @@ class Checker
     static void ExpectTrue(bool expression) {
         if(!expression) {
             Console.WriteLine("Expected true, but got false");
-            Environment.Exit(0);
+            Environment.Exit(1);
         }
     }
     static void ExpectFalse(bool expression) {
         if(expression) {
             Console.WriteLine("Expected false, but got true");
-            Environment.Exit(0);
+            Environment.Exit(1);
         }
     }
     static int Main() {
