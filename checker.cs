@@ -34,5 +34,6 @@ class Checker
         ExpectFalse(batteryIsOk(50, 85, 0.0f));
         Console.WriteLine("All ok");
         return 0;
+        
     }
 }
