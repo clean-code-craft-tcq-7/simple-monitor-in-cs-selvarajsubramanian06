@@ -4,8 +4,7 @@ using System.Diagnostics;
 class Checker
 {
     
-
-    static bool socIsOk(float soc)
+   static bool socIsOk(float soc)
     {
          if(soc < 20 || soc > 80) 
          {
