@@ -1,3 +1,6 @@
+using System;
+using System.Diagnostics;
+
 public static class temperatureCheck
 {
     public static bool temperatureIsOk(float temperature)
