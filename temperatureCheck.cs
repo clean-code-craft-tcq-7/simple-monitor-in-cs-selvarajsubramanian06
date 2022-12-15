@@ -1,4 +1,4 @@
-class temperatureCheck
+public static class temperatureCheck
 {
     public static bool temperatureIsOk(float temperature)
     {
