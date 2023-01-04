@@ -10,7 +10,7 @@ class Checker
             return false;
         } 
         return true;*/
-       return (temperatureCheck.temperatureIsOk(temperature) && socCheck.socIsOk(soc)) && chargeRateCheck.chargeRateIsOk(chargeRate));
+       return (temperatureCheck.temperatureIsOk(temperature) && socCheck.socIsOk(soc) && chargeRateCheck.chargeRateIsOk(chargeRate));
     }
 
     static void ExpectTrue(bool expression) {
