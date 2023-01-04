@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 public static class chargeRateCheck
 {
-    static bool chargeRateIsOk(float chargeRate)
+    public static bool chargeRateIsOk(float chargeRate)
     {
          if(chargeRate > 0.8) 
          {
