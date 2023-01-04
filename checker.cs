@@ -5,11 +5,12 @@ class Checker
 {
    
     static bool batteryIsOk(float temperature, float soc, float chargeRate) {
-        if(!temperatureCheck.temperatureIsOk(temperature) || !socCheck.socIsOk(soc)) /*|| !chargeRateCheck.chargeRateIsOk(chargeRate)*/
+        /*if(!temperatureCheck.temperatureIsOk(temperature) || !socCheck.socIsOk(soc)) || !chargeRateCheck.chargeRateIsOk(chargeRate))
         {
             return false;
         } 
-        return true;
+        return true;*/
+       return (temperatureCheck.temperatureIsOk(temperature) && socCheck.socIsOk(soc)) && chargeRateCheck.chargeRateIsOk(chargeRate))
     }
 
     static void ExpectTrue(bool expression) {
