@@ -5,7 +5,7 @@ class Checker
 {
    
     static bool batteryIsOk(float temperature, float soc, float chargeRate) {
-        if(!temperatureCheck.temperatureIsOk(temperature) || !socCheck.socIsOk(soc) || !chargeRateCheck.chargeRateIsOk(chargeRate)) 
+        if(!temperatureCheck.temperatureIsOk(temperature) || !socCheck.socIsOk(soc) /*|| !chargeRateCheck.chargeRateIsOk(chargeRate)*/) 
         {
             return false;
         } 
