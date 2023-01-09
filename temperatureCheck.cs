@@ -1,16 +1,19 @@
 using System;
 using System.Diagnostics;
 
-public static class temperatureCheck
+namespace NotUsed
 {
-    public static bool temperatureIsOk(float temperature)
+    public static class temperatureCheck
     {
-         if(temperature < 0 || temperature > 45) 
-         {
-            Console.WriteLine("Temperature is out of range!");
-            return false;
-         }
-        return true;
+        public static bool temperatureIsOk(float temperature)
+        {
+             if(temperature < 0 || temperature > 45) 
+             {
+                Console.WriteLine("Temperature is out of range!");
+                return false;
+             }
+            return true;
+        }
     }
 }
     
