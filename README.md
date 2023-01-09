@@ -1,3 +1,5 @@
+Extensions: 1. Early Warning - message
+
 # Programming Paradigms
 
 Electric Vehicles have BMS - Battery Management Systems
